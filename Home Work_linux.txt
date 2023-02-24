@@ -1,0 +1,11 @@
+   0 mkdir -p /home/user/start
+   1 touch /home/user/start/1.txt
+   2 echo "Start" >> 1.txt
+   3 echo "$(date)" >> 1.txt
+   4 mkdir -p /opt/task
+   5 cp /home/user/start/1.txt /opt/task/start.txt
+   6 find / -type f -printf '%T@ %p\n' | sort -n | tail -4 | cut -f2- -d" " >> /opt/task/start.txt
+   7 history
+   8 export_file
+   9 export_file history
+  10 history > history.txt
